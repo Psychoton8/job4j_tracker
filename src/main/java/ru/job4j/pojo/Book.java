@@ -27,10 +27,4 @@ public class Book {
     public void setPage(int page) {
         this.page = page;
     }
-
-    public void displayBooksByPhrase(String phrase) {
-        if (name.toLowerCase().contains(phrase.toLowerCase())) {
-            System.out.println(name);
-        }
-    }
 }
