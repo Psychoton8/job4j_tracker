@@ -5,13 +5,12 @@ import java.time.format.DateTimeFormatter;
 
 public class StartUI {
     public static void main(String[] args) {
-        LocalDateTime created = LocalDateTime.now();
         Item item = new Item();
+        LocalDateTime created = LocalDateTime.now();
         LocalDateTime itemDateTime = item.getCreated();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        String currentDateTimeFormat = created.format(formatter);
-        System.out.println(currentDateTimeFormat);
+        System.out.println(item);
     }
+
 }
 
 
