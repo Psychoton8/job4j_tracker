@@ -44,4 +44,15 @@ public class Tracker {
         }
         return Arrays.copyOf(item, index);
     }
+
+    public boolean replace(int id, Item item) {
+        int rsl = indexOf (id);
+        if (rsl != -1) {
+            Item tmp = items[rsl];
+            items[rsl] = item;
+            items[rsl].setId(tmp.getId());
+            add(tmp);
+        }
+        return rsl != -1;
+    }
 }
