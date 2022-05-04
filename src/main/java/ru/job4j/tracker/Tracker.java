@@ -46,7 +46,7 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        int rsl = indexOf (id);
+        int rsl = indexOf(id);
         if (rsl != -1) {
             Item tmp = items[rsl];
             items[rsl] = item;
