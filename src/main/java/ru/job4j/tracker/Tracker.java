@@ -59,7 +59,7 @@ public class Tracker {
         if (index != -1) {
             int startPos = index + 1;
             int length = size - index - 1;
-            Item dist[] = new Item[length];
+            Item[] dist = new Item[length];
             int distPos = index;
             items[size - 1] = null;
             size--;
