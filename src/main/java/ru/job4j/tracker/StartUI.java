@@ -61,7 +61,7 @@ public class StartUI {
         }
     }
 
-    public static void findItemName(Input input,Tracker tracker) {
+    public static void findItemName(Input input, Tracker tracker) {
         System.out.println("=== Find items by name ===");
         System.out.print("Enter name: ");
         String name = input.askStr(msg);
@@ -74,8 +74,6 @@ public class StartUI {
             System.out.println("Заявки с именем: " + name + " не найдены.");
         }
     }
-
-
 
     public void init(Input input, Tracker tracker) {
         boolean run = true;
