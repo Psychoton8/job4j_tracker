@@ -1,8 +1,7 @@
 package ru.job4j.tracker;
 
-import org.junit.Test;
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class StartUITest {
     @Test
@@ -13,11 +12,11 @@ public class StartUITest {
         StartUI.createItem(input, tracker);
         Item created = tracker.findAll()[0];
         Item expected = new Item("Fix PC");
-        assertThat(created.getName(), is(expected.getName()));
+        assertThat(created.getName()).isEqualTo(expected.getName());
     }
 
-    @org.junit.jupiter.api.Test
-    void editItem() {
+    @Test
+    void whenEditItem() {
         Tracker tracker = new Tracker();
         Item item = new Item("new item");
         tracker.add(item);
@@ -30,7 +29,16 @@ public class StartUITest {
         assertThat(edited.getName()).isEqualTo("edited item");
     }
 
-    @org.junit.jupiter.api.Test
-    void deleteItem() {
+    @Test
+    void whenDeleteItem() {
+        Tracker tracker = new Tracker();
+        Item item = new Item("new item");
+        tracker.add(item);
+        String[] answers = {
+                String.valueOf(item.getId()),
+        };
+        StartUI.deleteItem(new StubInput(answers), tracker);
+        Item edited = tracker.findById(item.getId());
+        assertThat(edited).isNull();
     }
 }
