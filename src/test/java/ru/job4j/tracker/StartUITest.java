@@ -69,7 +69,7 @@ class StartUITest {
                 new ExitAction()
         };
         Input in = new StubInput(
-                new String[] {"0", findMyItem ,"1"}
+                new String[] {"0", findMyItem, "1"}
         );
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
@@ -78,7 +78,7 @@ class StartUITest {
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
                         + "=== Find items by name ===" + ln
-                        + "Item{id=1, name='"+ findMyItem + "', created="
+                        + "Item{id=1, name='" + findMyItem + "', created="
                         + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
                         + "}" + ln
                         + "Menu." + ln
@@ -88,7 +88,7 @@ class StartUITest {
     }
 
     @Test
-    public void FindByIdActionIsSuccessfully() {
+    public void whenFindByIdActionIsSuccessfully() {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("item one"));
@@ -99,7 +99,7 @@ class StartUITest {
                 new ExitAction()
         };
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(two.getId()),"1"}
+                new String[] {"0", String.valueOf(two.getId()), "1"}
         );
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
@@ -108,7 +108,7 @@ class StartUITest {
                         + "0. Find item by ID" + ln
                         + "1. Exit Program" + ln
                         + "=== Find item by id ===" + ln
-                        + "Item{id=2, name='" +two.getName() +"', created="
+                        + "Item{id=2, name='" + two.getName() + "', created="
                         + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
                         + "}" + ln
                         + "Menu." + ln
@@ -118,7 +118,7 @@ class StartUITest {
     }
 
     @Test
-    public void FindAllActionIsSuccessfully() {
+    public void whenFindAllActionIsSuccessfully() {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("item one"));
@@ -130,7 +130,7 @@ class StartUITest {
                 new ExitAction()
         };
         Input in = new StubInput(
-                new String[] {"0","1"}
+                new String[] {"0", "1"}
         );
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
