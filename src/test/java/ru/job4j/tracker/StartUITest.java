@@ -78,7 +78,7 @@ class StartUITest {
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
                         + "=== Find items by name ===" + ln
-                        + one.toString() + ln
+                        + one + ln
                         + "Menu." + ln
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
@@ -106,7 +106,7 @@ class StartUITest {
                         + "0. Find item by ID" + ln
                         + "1. Exit Program" + ln
                         + "=== Find item by id ===" + ln
-                        + two.toString() + ln
+                        + two + ln
                         + "Menu." + ln
                         + "0. Find item by ID" + ln
                         + "1. Exit Program" + ln
@@ -135,9 +135,9 @@ class StartUITest {
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
                         + "=== Show all items ===" + ln
-                        + one.toString() + ln
-                        + two.toString() + ln
-                        + three.toString() + ln
+                        + one + ln
+                        + two + ln
+                        + three + ln
                         + "Menu." + ln
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
