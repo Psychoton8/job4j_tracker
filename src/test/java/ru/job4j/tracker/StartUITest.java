@@ -78,9 +78,7 @@ class StartUITest {
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
                         + "=== Find items by name ===" + ln
-                        + "Item{id=1, name='" + findMyItem + "', created="
-                        + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
-                        + "}" + ln
+                        + one.toString() + ln
                         + "Menu." + ln
                         + "0. Find item by name" + ln
                         + "1. Exit Program" + ln
@@ -108,9 +106,7 @@ class StartUITest {
                         + "0. Find item by ID" + ln
                         + "1. Exit Program" + ln
                         + "=== Find item by id ===" + ln
-                        + "Item{id=2, name='" + two.getName() + "', created="
-                        + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
-                        + "}" + ln
+                        + two.toString() + ln
                         + "Menu." + ln
                         + "0. Find item by ID" + ln
                         + "1. Exit Program" + ln
@@ -139,15 +135,9 @@ class StartUITest {
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
                         + "=== Show all items ===" + ln
-                        + "Item{id=1, name='" + one.getName() + "', created="
-                        + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
-                        + "}" + ln
-                        + "Item{id=2, name='" + two.getName() + "', created="
-                        + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
-                        + "}" + ln
-                        + "Item{id=3, name='" + three.getName() + "', created="
-                        + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss"))
-                        + "}" + ln
+                        + one.toString() + ln
+                        + two.toString() + ln
+                        + three.toString() + ln
                         + "Menu." + ln
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
