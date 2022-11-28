@@ -12,6 +12,7 @@ public class FindEl {
         }
         return rsl;
     }
+
    public static void load(String mess) throws ElementNotFoundException {
         if (mess == null) {
             throw new ElementNotFoundException("Element wasn't found");
