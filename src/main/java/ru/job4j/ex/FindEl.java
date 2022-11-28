@@ -9,17 +9,19 @@ public class FindEl {
             if (Objects.equals(value[i], key)) {
                 rsl = i;
                 break;
-            } else {
-                throw new ElementNotFoundException("Element wasn't found");
             }
         }
-        return rsl;
+        if (rsl == -1) {
+            throw new ElementNotFoundException("Element wasn't found");
+        } else {
+            return rsl;
+        }
     }
 
     public static void main(String[] args) {
         String[] dayOfWeek = new String[] {"Monday", "Tuesday", "Wednesday"};
         try {
-            indexOf(dayOfWeek, "Monday");
+            indexOf(dayOfWeek, "Wednesday");
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
