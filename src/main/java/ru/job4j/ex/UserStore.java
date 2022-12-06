@@ -5,10 +5,10 @@ import java.util.Objects;
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         boolean rsl = false;
-        for (int i = 0; i < users.length; i++) {
-            if (Objects.equals(users[i].getUsername(), login)) {
+        for (User user : users) {
+            if (Objects.equals(user.getUsername(), login)) {
                 rsl = true;
-                return users[i];
+                return user;
             }
         }
         if (!rsl) {
@@ -18,7 +18,6 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        String name = user.getUsername();
         if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("User is invalid");
         }
