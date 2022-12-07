@@ -159,8 +159,8 @@ class StartUITest {
         assertThat(out.toString()).isEqualTo(
                 "Menu." + ln
                         + "0. Exit Program" + ln
-                        + "Wrong input, you can select: 0, 1, 2, 3, 4, 5" +
-                        (actions.length -1) + ln
+                        + "Wrong input, you can select: 0, 1, 2, 3, 4, 5"
+                        + (actions.length - 1) + ln
                         + "Menu." + ln
                         + "0. Exit Program" + ln
         );
