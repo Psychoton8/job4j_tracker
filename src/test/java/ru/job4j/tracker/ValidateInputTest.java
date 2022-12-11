@@ -13,16 +13,18 @@ class ValidateInputTest {
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(1);
     }
 
     @Test
     public void whenValidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"one", "1"}
+                new String[] {"1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(1);
     }
 
     @Test
@@ -33,15 +35,21 @@ class ValidateInputTest {
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(1);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(2);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(3);
     }
 
     @Test
     public void whenNegativeInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"3", "-1"}
+                new String[] {"-1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
+        assertThat(selected).isEqualTo(-1);
     }
 }
