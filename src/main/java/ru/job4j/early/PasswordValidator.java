@@ -6,7 +6,10 @@ import java.util.List;
 
 public class PasswordValidator {
     public static String validate(String password) {
-        boolean isDigit = false, isUpperCase = false, isLowerCase = false, isFigure = false;
+        boolean isDigit = false,
+                isUpperCase = false,
+                isLowerCase = false,
+                isFigure = false;
         if (password == null) {
             throw new IllegalArgumentException("Password can't be null");
         }
