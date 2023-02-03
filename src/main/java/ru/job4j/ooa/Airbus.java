@@ -3,7 +3,7 @@ package ru.job4j.ooa;
 import java.util.Objects;
 
 public final class Airbus extends Aircraft {
-    private static int COUNT_ENGINE = 2;
+    private static final int COUNT_ENGINE = 2;
 
     private String name;
 
