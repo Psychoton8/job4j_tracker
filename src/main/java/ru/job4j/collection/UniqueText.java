@@ -15,7 +15,7 @@ public class UniqueText {
             if (!check.contains(texts)) {
                 rsl = false;
                 break;
-            };
+            }
         }
         return rsl;
     }
