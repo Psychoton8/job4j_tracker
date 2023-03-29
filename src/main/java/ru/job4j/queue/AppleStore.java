@@ -21,7 +21,7 @@ public class AppleStore {
     }
 
     public String getFirstUpsetCustomer() {
-        for (int i = 0; i < count ; i++) {
+        for (int i = 0; i < count; i++) {
            queue.poll();
         }
         return queue.peek().name();
