@@ -30,12 +30,8 @@ public class ReconstructPhrase {
         StringBuilder str = new StringBuilder();
         int size = descendingElements.size();
         for (int i = 0; i < size; i++) {
-            if (descendingElements.peek() == 0) {
-                break;
-            } else {
                 str.append(descendingElements.pollLast());
             }
-        }
         return str.toString();
     }
 
