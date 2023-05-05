@@ -12,7 +12,8 @@ public class AnalyzeByMap {
                 amount++;
             }
         }
-        return score /= amount;
+        score /= amount;
+        return score;
     }
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
