@@ -63,4 +63,9 @@ public class Item {
         Item item = (Item) o;
         return id == item.id && Objects.equals(name, item.name);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
 }

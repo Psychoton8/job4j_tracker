@@ -23,7 +23,7 @@ class ItemAscByNameTest {
         List<Item> expected = Arrays.asList(
                 new Item(1, "abcde"),
                 new Item(4, "fghij"),
-                new Item(2,"klmnop"),
+                new Item(2, "klmnop"),
                 new Item(3, "qrstuv")
         );
         assertThat(items).isEqualTo(expected);
