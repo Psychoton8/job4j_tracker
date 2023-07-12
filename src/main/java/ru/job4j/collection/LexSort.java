@@ -12,3 +12,4 @@ public class LexSort implements Comparator<String> {
         return Integer.compare(leftNum, rightNum);
     }
 }
+
