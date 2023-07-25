@@ -2,10 +2,27 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает модель пользователя банка.
+ * Поля: номер паспорта, ФИО.
+ * @author Milana
+ * @version 1.0
+ */
 public class User {
+    /**
+     * Номер паспорта
+     */
     private String passport;
+    /**
+     * ФИО пользователя
+     */
     private String username;
 
+    /**
+     * Добавление нового пользователя.
+     * @param passport номер паспорта
+     * @param username ФИО
+     */
     public User(String passport, String username) {
         this.passport = passport;
         this.username = username;
