@@ -32,7 +32,7 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-        Map<String, Integer> temp = new LinkedHashMap<>();
+        /*Map<String, Integer> temp = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 int amount = temp.getOrDefault(subject.name(), 0);
@@ -43,6 +43,15 @@ public class AnalyzeByMap {
         for (String subject : temp.keySet()) {
             subjectScore.add(new Label(subject, temp.get(subject) / pupils.size()));
         }
+        return subjectScore;*/
+        Map<String, Integer> temp = new LinkedHashMap<>();
+        for (Pupil pupil : pupils) {
+            for (Subject subject : pupil.subjects()) {
+              temp.merge(subject.name(), subject.score(), Integer::sum);
+            }
+        }
+        List<Label> subjectScore = new ArrayList<>();
+        temp.forEach((subject, score) -> subjectScore.add(new Label(subject, score / pupils.size())));
         return subjectScore;
     }
 
@@ -60,11 +69,23 @@ public class AnalyzeByMap {
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
-        Map<String, Integer> temp = new LinkedHashMap<>();
+        /*Map<String, Integer> temp = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 int score = temp.getOrDefault(subject.name(), 0);
                 temp.put(subject.name(), score + subject.score());
+            }
+        }
+        List<Label> subjectScore = new ArrayList<>();
+        for (String subject : temp.keySet()) {
+            subjectScore.add(new Label(subject, temp.get(subject)));
+        }
+        subjectScore.sort(Comparator.naturalOrder());
+        return subjectScore.get(subjectScore.size() - 1);*/
+        Map<String, Integer> temp = new LinkedHashMap<>();
+        for (Pupil pupil :pupils) {
+            for (Subject subject : pupil.subjects()) {
+                temp.merge(subject.name(), subject.score(), Integer::sum);
             }
         }
         List<Label> subjectScore = new ArrayList<>();
