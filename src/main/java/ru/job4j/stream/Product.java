@@ -30,7 +30,7 @@ public class Product {
         return standart;
     }
 
-    public int getActual(){
+    public int getActual() {
         return actual;
     }
 
@@ -51,6 +51,6 @@ public class Product {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, price, standart,actual);
+        return Objects.hash(name, price, standart, actual);
     }
 }
