@@ -7,7 +7,7 @@ public class Student {
 
     private String surname;
 
-    public Student(int score, String name) {
+    public Student(int score, String surname) {
         this.score = score;
         this.surname = surname;
     }
