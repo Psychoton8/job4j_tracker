@@ -15,6 +15,7 @@ public class Card {
     enum Value {
         V_6, V_7, V_8
     }
+
     public Card(Suit suit, Value value) {
         this.suit = suit;
         this.value = value;
