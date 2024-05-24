@@ -1,5 +1,6 @@
 package ru.job4j.stream;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -41,7 +42,7 @@ public class Analyze {
                         pupil.subjects().stream()
                                 .mapToInt(Subject::score)
                                 .sum()))
-                .max((tuple1, tuple2) -> Double.compare(tuple1.score(), tuple2.score()))
+                .max(Comparator.comparingDouble(Tuple::score))
                 .orElse(null);
     }
 
@@ -54,7 +55,7 @@ public class Analyze {
                 ))
                 .entrySet().stream()
                 .map(entry -> new Tuple(entry.getKey(), entry.getValue()))
-                .max((tuple1, tuple2) -> Double.compare(tuple1.score(), tuple2.score()))
+                .max(Comparator.comparingDouble(Tuple::score))
                 .orElse(null);
     }
 }
